@@ -2,90 +2,11 @@
 <html>
     <head>
         <title>Uniqueness</title>
-        <style>
-            @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
-            body {
-                font-family: 'Open Sans', sans-serif;
-                margin:0;
-                padding:0;
-            }
-
-            section#header {
-                background-color:#3F51B5;
-                box-style: border-box;
-                height:100vh;
-                position:relative;
-            }
-
-            section#header h1 {
-                color:#FFF;
-                text-align:center;
-                font-weight:lighter;
-                font-size:80px;
-                line-height:100vh;
-                margin:0;
-                padding:0;
-            }
-
-            section {
-                padding:20px;
-                overflow-x:hidden;
-            }
-
-            .terrible {
-                transition: all 0.5s ease;}
-
-            .terrible-on {
-                background-color:#AaA;
-                font-family: "Comic Sans MS";
-                color: #F00;
-            }
-
-            .terrible-on h1 {
-                animation: marquee 5s linear infinite;
-                color:#FFF;
-            }
-
-            section#header.terrible-on {
-                animation: colorwheel 5s linear infinite;
-            }
-
-            @keyframes marquee {
-                0% {
-                    transform: translateX(0);
-                }
-                50% {
-                    transform: translateX(-100%);
-                }
-                50.001% {
-                    transform: translateX(100%);
-                }
-                100% {
-                    transform: translateX(0);
-                }
-            }
-
-            @keyframes colorwheel {
-                0% {
-                    background-color:#F00;
-                }
-                25% {
-                    background-color:#00F;
-                }
-                50% {
-                    background-color:#0F0;
-                }
-                75% {
-                    background-color:#FF0;
-                }
-                100% {
-                    background-color: #F00;
-                }
-            }
-        </style>
+        <link rel = "stylesheet" type = "text/css" src = "http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
+        <link rel = "stylesheet" type = "text/css" src = "/css/style.css">
+        <script type = "text/javascript" src = "/js/script.js"></script>
     </head>
     <body>
-
         <section id="header" class="terrible">
             <h1>TerribleHack</h1>
         </section>
@@ -103,29 +24,5 @@
                 <p>Nullam scelerisque nibh et elit cursus gravida. Integer nec varius nisi, id vulputate sapien. Donec rutrum leo vel lacus viverra consequat. Donec finibus, tortor non sollicitudin dictum, quam urna ultrices lorem, a suscipit arcu nunc sed ipsum. Suspendisse ac tempus sapien, euismod scelerisque massa. Duis ipsum dolor, maximus non tempus sed, ornare at lorem. Proin fermentum vestibulum condimentum. Nam convallis, purus congue posuere finibus, ligula nunc aliquam nunc, ut consectetur odio metus vitae sem. Aliquam erat volutpat.</p>
             </div>
         </section>
-        <script>
-            var doc;
-            var elements;
-            var scroll = function() {
-                var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-                Array.prototype.forEach.call(elements, function(element) {
-                    var rect = element.getBoundingClientRect();
-                    if (rect.top + (rect.bottom-rect.top)/2 >= top) {
-                        element.classList.remove("terrible-on");
-                    } else {
-                        element.classList.add("terrible-on");
-                    }
-                });
-            };
-
-            window.onload = function() {
-                doc = document.documentElement;
-                elements = document.getElementsByClassName("terrible");
-                window.requestAnimationFrame(scroll);
-                window.addEventListener("scroll", function() {
-                    window.requestAnimationFrame(scroll);
-                });
-            };
-        </script>
     </body>
 </html>
