@@ -36,15 +36,15 @@ section {
 }
 
 .terrible-on h1 {
-    animation: marquee 5s linear infinite;
+    -webkit-animation: marquee 5s linear infinite;
     color:#FFF;
 }
 
 section#header.terrible-on {
-    animation: colorwheel 5s linear infinite;
+    -webkit-animation: colorwheel 5s linear infinite;
 }
 
-@keyframes marquee {
+@-webkit-keyframes marquee {
     0% {
         transform: translateX(0);
     }
@@ -59,7 +59,7 @@ section#header.terrible-on {
     }
 }
 
-@keyframes colorwheel {
+@-webkit-keyframes colorwheel {
     0% {
         background-color:#F00;
     }
