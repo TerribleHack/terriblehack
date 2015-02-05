@@ -15,7 +15,7 @@ section#header h1 {
     color:#FFF;
     text-align:center;
     font-weight:lighter;
-    font-size:80px;
+    font-size:8em;
     line-height:100vh;
     margin:0;
     padding:0;
@@ -37,13 +37,17 @@ section {
 
 .terrible-on h1 {
     -webkit-animation: marquee 5s linear infinite;
+    animation: marquee 5s linear infinite;
     color:#FFF;
 }
 
 section#header.terrible-on {
     -webkit-animation: colorwheel 5s linear infinite;
+    animation: colorwheel 5s linear infinite;
 }
 
+
+/* Animations */
 @-webkit-keyframes marquee {
     0% {
         transform: translateX(0);
@@ -59,7 +63,41 @@ section#header.terrible-on {
     }
 }
 
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    50.001% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
 @-webkit-keyframes colorwheel {
+    0% {
+        background-color:#F00;
+    }
+    25% {
+        background-color:#00F;
+    }
+    50% {
+        background-color:#0F0;
+    }
+    75% {
+        background-color:#FF0;
+    }
+    100% {
+        background-color: #F00;
+    }
+}
+
+@keyframes colorwheel {
     0% {
         background-color:#F00;
     }
