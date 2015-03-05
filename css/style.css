@@ -30,7 +30,7 @@ section {
     transition: all 0.5s ease;}
 
 .terrible-on {
-    background-color:#AaA;
+    /*background-color:#AaA;*/
     font-family: "Comic Sans MS";
     color: #F00;
 }
@@ -46,6 +46,51 @@ section#header.terrible-on {
     animation: colorwheel 5s linear infinite;
 }
 
+h2 {
+    font-size: 50px;
+    text-align:center;
+}
+
+h2.secondary {
+    font-size:45px;
+    font-style: italic;
+}
+
+h3 {
+    font-size:40px;
+    text-align:center;
+}
+
+.half {
+    display:inline-block;
+    width:49%;
+    vertical-align:top;
+}
+
+a.button {
+    display:block;
+    width:200px;
+    margin:20px auto;
+    color:#FFF;
+    background-color:firebrick;
+    padding:20px;
+    text-align:center;
+    text-decoration:none;
+}
+a.button:hover {
+    background-color:blueviolet;
+}
+
+#main {
+    background-image:url("../img/dc1351.jpg");
+    background-position:center;
+    background-size:cover;
+    color:#FFF;
+}
+
+#footer {
+    background-color:#3F51B5;
+}
 
 /* Animations */
 @-webkit-keyframes marquee {
