@@ -92,6 +92,10 @@ a.button:hover {
     background-color:#3F51B5;
 }
 
+#footer img {
+    border-radius: 50%;
+}
+
 /* Animations */
 @-webkit-keyframes marquee {
     0% {

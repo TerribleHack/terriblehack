@@ -255,15 +255,15 @@
 
 /* @group Nausea */
 
-.nausea {
+.terrible-on.nausea {
     display: inline-block;
     position: relative;
 
-    -webkit-animation: nausea .25s linear infinite;
-    -moz-animation: nausea .25s linear infinite;
-    -ms-animation: nausea .25s linear infinite;
-    -o-animation: nausea .25s linear infinite;
-    animation: nausea .25s linear infinite;
+    -webkit-animation: nausea 15s linear infinite;
+    -moz-animation: nausea 15s linear infinite;
+    -ms-animation: nausea 15s linear infinite;
+    -o-animation: nausea 15s linear infinite;
+    animation: nausea 15s linear infinite;
 }
 
 @-webkit-keyframes nausea {
