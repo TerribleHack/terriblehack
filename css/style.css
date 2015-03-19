@@ -67,6 +67,12 @@ h3 {
     vertical-align:top;
 }
 
+.thirds {
+    display:inline-block;
+    width:32%;
+    vertical-align:top;
+}
+
 a.button {
     display:block;
     width:200px;
