@@ -11,6 +11,12 @@ section#header {
     position:relative;
 }
 
+section.rules{
+height:20vh !important;
+}
+section.rules h1 {
+    line-height:15vh !important;
+}
 section#header h1 {
     color:#FFF;
     text-align:center;
