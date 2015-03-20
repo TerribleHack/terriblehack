@@ -6,6 +6,10 @@
         <link rel = "stylesheet" type = "text/css" href = "css/style.css">
         <link rel = "stylesheet" type = "text/css" href = "css/real-world.css">
         <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <!-- Add the stylesheet to the head -->
+		<link rel="stylesheet" type="text/css" href="clippy.css" media="all">
+
+
     </head>
     <body>
         <section id="header" class="terrible">
@@ -57,6 +61,11 @@
                     <a href="https://github.com/kpourdeilami"><img src="img/cashmoney.jpg" class="terrible nausea" title="Khashayar Pourdeilami"></a>
                 </div>
             </div>
+            <div class="thirds">
+                <div class="wrapper">
+                    <a href="github.com/drampelt"><img src="img/daniel.jpg" class="terrible nausea" title="Daniel Rampelt"></a>
+                </div>
+            </div>
 			<div class="thirds" style="text-align:left;">
                 <div class="wrapper">
                     <a href="http://mathsoc.uwaterloo.ca/"><img src="img/mathsoclogo.png" class="terrible nausea" title="Mathsoc"></a>
@@ -66,6 +75,21 @@
                 <h4 class="wordart" title="Inspired by:">Inspired by</h4><h4><a href="http://lav.io/2014/11/stupid-projects-from-the-stupid-hackathon/">this earlier Stupid Hackathon</a></h4>
             </div>
         </section>
-        <script type = "text/javascript" src = "js/script.js"></script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+		<script type = "text/javascript" src = "js/script.js"></script>
+
+		<!-- Clippy.js -->
+		<script src="clippy.min.js"></script>
+
+		<!-- Init script -->
+		<script type="text/javascript">
+		    clippy.load('Clippy', function(agent) {
+		        // Do anything with the loaded agent
+		        agent.show();
+		    });
+		</script>
     </body>
+
 </html>
