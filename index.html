@@ -88,6 +88,9 @@
 		    clippy.load('Clippy', function(agent) {
 		        // Do anything with the loaded agent
 		        agent.show();
+		        setInterval(function() {
+		        	agent.animate();
+		        }, 6000);
 		    });
 		</script>
     </body>
