@@ -1,177 +1,163 @@
+@import url(http://fonts.googleapis.com/css?family=Henny+Penny);
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
 body {
-    font-family: 'Open Sans', sans-serif;
-    margin:0;
-    padding:0;
-}
-
-section#header {
-    background-color:#3F51B5;
-    box-style: border-box;
-    height:100vh;
-    position:relative;
-}
-
-section.rules{
-height:20vh !important;
-}
-section.rules h1 {
-    line-height:15vh !important;
-}
-section#header h1 {
-    color:#FFF;
-    text-align:center;
-    font-weight:lighter;
-    font-size:8em;
-    line-height:100vh;
-    margin:0;
-    padding:0;
-}
-
-section {
-    padding:20px;
-    overflow-x:hidden;
-}
-
-.terrible {
-    transition: all 0.5s ease;}
-
-.terrible-on {
-    /*background-color:#AaA;*/
-    font-family: "Comic Sans MS";
-    color: #F00;
-}
-
-.terrible-on h1 {
-    -webkit-animation: marquee 5s linear infinite;
-    animation: marquee 5s linear infinite;
-    color:#FFF;
-}
-
-section#header.terrible-on {
-    -webkit-animation: colorwheel 5s linear infinite;
-    animation: colorwheel 5s linear infinite;
-}
-
-h2 {
-    font-size: 50px;
-    text-align:center;
-}
-
-h2.secondary {
-    font-size:45px;
-    font-style: italic;
-}
-
-h3 {
-    font-size:40px;
-    text-align:center;
-}
-
-.half {
-    display:inline-block;
-    width:49%;
-    vertical-align:top;
-}
-
-.thirds {
-    display:inline-block;
-    width:13%;
-    vertical-align:top;
-}
-
-a.button {
-    display:block;
-    width:200px;
-    margin:20px auto;
-    color:#FFF;
-    background-color:firebrick;
-    padding:20px;
-    text-align:center;
-    text-decoration:none;
-}
-a.button:hover {
-    background-color:blueviolet;
+  margin: 0;
+  background-color: #000;
+  font-family: 'Poiret One', sans;
 }
 
 #main {
-    background-image:url("../img/dc1351.jpg");
-    background-position:center;
-    background-size:cover;
-    color:#FFF;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  text-align: center;
+  background: -webkit-linear-gradient(rgba(18, 57, 75, 0.86) 0%, rgba(63, 46, 104, 0.4) 78%), url(http://www.davepagurek.com/content/images/2015/3/IMG_20150321_140343.jpg);
+  background: linear-gradient(rgba(18, 57, 75, 0.86) 0%, rgba(63, 46, 104, 0.4) 78%), url(http://www.davepagurek.com/content/images/2015/3/IMG_20150321_140343.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #FFF;
 }
 
-#footer {
-    background-color:#3F51B5;
+.button {
+  display: inline-block;
+  width:0;
+  height:0;
+  position: relative;
+  margin-bottom:60px;
+}
+.button a {
+  cursor: pointer;
+  display: block;
+  background-color: #FFF;
+  width: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  color: #708;
+  position: absolute;
+  left: -70px;
+  top: 0;
 }
 
-#footer img {
-    border-radius: 50%;
+.content {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 50px;
+}
+.content:hover {
+  font-family: 'Henny Penny', cursive;
+  -webkit-animation-name: jello;
+          animation-name: jello;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  color: cyan;
 }
 
-/* Animations */
-@-webkit-keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-100%);
-    }
-    50.001% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+h1 {
+  font-size: 50px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-100%);
-    }
-    50.001% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+a {
+  color: #0F0;
+  -webkit-transition: all ease 0.3s;
+          transition: all ease 0.3s;
+}
+a:hover {
+  color: #F00;
+  -webkit-transform: scale(5, 2) rotate(600deg);
+      -ms-transform: scale(5, 2) rotate(600deg);
+          transform: scale(5, 2) rotate(600deg);
 }
 
-
-@-webkit-keyframes colorwheel {
-    0% {
-        background-color:#F00;
-    }
-    25% {
-        background-color:#00F;
-    }
-    50% {
-        background-color:#0F0;
-    }
-    75% {
-        background-color:#FF0;
-    }
-    100% {
-        background-color: #F00;
-    }
+@-webkit-keyframes jello {
+  from, 11.1%, to {
+    -webkit-transform: none;
+    transform: none;
+  }
+  22.2% {
+    -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+  33.3% {
+    -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+  44.4% {
+    -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+  55.5% {
+    -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+  66.6% {
+    -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+  77.7% {
+    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
+    transform: skewX(0.39063deg) skewY(0.39063deg);
+  }
+  88.8% {
+    -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
+    transform: skewX(-0.19531deg) skewY(-0.19531deg);
+  }
 }
 
-@keyframes colorwheel {
-    0% {
-        background-color:#F00;
-    }
-    25% {
-        background-color:#00F;
-    }
-    50% {
-        background-color:#0F0;
-    }
-    75% {
-        background-color:#FF0;
-    }
-    100% {
-        background-color: #F00;
-    }
+@keyframes jello {
+  from, 11.1%, to {
+    -webkit-transform: none;
+    transform: none;
+  }
+  22.2% {
+    -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+  33.3% {
+    -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+  44.4% {
+    -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+  55.5% {
+    -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+  66.6% {
+    -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+  77.7% {
+    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
+    transform: skewX(0.39063deg) skewY(0.39063deg);
+  }
+  88.8% {
+    -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
+    transform: skewX(-0.19531deg) skewY(-0.19531deg);
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
