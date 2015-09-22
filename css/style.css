@@ -14,8 +14,8 @@ body {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   text-align: center;
-  background: -webkit-linear-gradient(rgba(18, 57, 75, 0.86) 0%, rgba(63, 46, 104, 0.4) 78%), url(http://www.davepagurek.com/content/images/2015/3/IMG_20150321_140343.jpg);
-  background: linear-gradient(rgba(18, 57, 75, 0.86) 0%, rgba(63, 46, 104, 0.4) 78%), url(http://www.davepagurek.com/content/images/2015/3/IMG_20150321_140343.jpg);
+  background: -webkit-linear-gradient(rgba(18, 57, 75, 0.86) 0%, rgba(63, 46, 104, 0.8) 78%), url(http://www.davepagurek.com/content/images/2015/3/IMG_20150321_140343.jpg);
+  background: linear-gradient(rgba(18, 57, 75, 0.86) 0%, rgba(63, 46, 104, 0.8) 78%), url(http://www.davepagurek.com/content/images/2015/3/IMG_20150321_140343.jpg);
   background-position: center;
   background-size: cover;
   color: #FFF;
@@ -38,7 +38,7 @@ body {
     text-align:center;
     transition: all ease 0.4s;
 }
-.button h1:hover {
+.spacer h1:hover {
     -webkit-transform: scale(5, 2) rotate(600deg);
     -ms-transform: scale(5, 2) rotate(600deg);
     transform: scale(5, 2) rotate(600deg);
@@ -54,6 +54,12 @@ a.button {
     margin:20px 0;
     width: 200px;
     text-decoration:none;
+}
+
+p {
+    max-width: 500px;
+    margin: 20px auto;
+    font-size:18px;
 }
 
 .content {
