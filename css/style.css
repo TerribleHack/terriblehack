@@ -21,24 +21,39 @@ body {
   color: #FFF;
 }
 
-.button {
+.spacer {
   display: inline-block;
   width:0;
   height:0;
-  position: relative;
-  margin-bottom:60px;
+  margin-bottom:150px;
 }
-.button a {
-  cursor: pointer;
-  display: block;
-  background-color: #FFF;
-  width: 100px;
-  padding: 20px;
-  border-radius: 10px;
-  color: #708;
-  position: absolute;
-  left: -70px;
-  top: 0;
+.spacer h1 {
+    position:absolute;
+    top:100px;
+    margin-top:0;
+    margin-bottom:0;
+    left:50%;
+    margin-left:-150px;
+    width:300px;
+    text-align:center;
+    transition: all ease 0.4s;
+}
+.button h1:hover {
+    -webkit-transform: scale(5, 2) rotate(600deg);
+    -ms-transform: scale(5, 2) rotate(600deg);
+    transform: scale(5, 2) rotate(600deg);
+}
+
+a.button {
+    background-color: #FFF;
+    width: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #708; 
+    display:inline-block;
+    margin:20px 0;
+    width: 200px;
+    text-decoration:none;
 }
 
 .content {
@@ -46,18 +61,18 @@ body {
   min-height: 100vh;
   padding: 50px;
 }
-.content:hover {
-  font-family: 'Henny Penny', cursive;
-  -webkit-animation-name: jello;
-          animation-name: jello;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  color: cyan;
-}
+/*.content:hover {*/
+  /*font-family: 'Henny Penny', cursive;*/
+  /*-webkit-animation-name: jello;*/
+          /*animation-name: jello;*/
+  /*-webkit-animation-iteration-count: infinite;*/
+          /*animation-iteration-count: infinite;*/
+  /*-webkit-animation-duration: 2s;*/
+          /*animation-duration: 2s;*/
+  /*-webkit-animation-fill-mode: both;*/
+          /*animation-fill-mode: both;*/
+  /*color: cyan;*/
+/*}*/
 
 h1 {
   font-size: 50px;
