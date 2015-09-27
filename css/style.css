@@ -182,3 +182,15 @@ a:hover {
     opacity: 1;
   }
 }
+
+
+.partners {
+    line-height: 30px;
+}
+
+.inline-img {
+    display: inline-block;
+    max-height: 110px;
+    width: auto;
+    margin: 50px;
+}
