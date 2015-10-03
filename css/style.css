@@ -192,7 +192,7 @@ a:hover {
 .partners {
   line-height: 30px;
   border-radius: 10px;
-  background: #FFF;
+  background: rgba(255, 255, 255, 0.74);
 }
 
 .inline-img {
