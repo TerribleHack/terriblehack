@@ -8,11 +8,11 @@ body {
 
 #main {
   -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
+  animation-name: fadeIn;
   -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-duration: 2s;
   -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-fill-mode: both;
   text-align: center;
   background: -webkit-linear-gradient(rgba(18, 57, 75, 0.86) 0%, rgba(63, 46, 104, 0.8) 78%), url(http://www.davepagurek.com/content/images/2015/3/IMG_20150321_140343.jpg);
   background: linear-gradient(rgba(18, 57, 75, 0.86) 0%, rgba(63, 46, 104, 0.8) 78%), url(http://www.davepagurek.com/content/images/2015/3/IMG_20150321_140343.jpg);
@@ -28,38 +28,38 @@ body {
   margin-bottom:150px;
 }
 .spacer h1 {
-    position:absolute;
-    top:100px;
-    margin-top:0;
-    margin-bottom:0;
-    left:50%;
-    margin-left:-150px;
-    width:300px;
-    text-align:center;
-    transition: all ease 0.4s;
+  position:absolute;
+  top:100px;
+  margin-top:0;
+  margin-bottom:0;
+  left:50%;
+  margin-left:-150px;
+  width:300px;
+  text-align:center;
+  transition: all ease 0.4s;
 }
 .spacer h1:hover {
-    -webkit-transform: scale(5, 2) rotate(600deg);
-    -ms-transform: scale(5, 2) rotate(600deg);
-    transform: scale(5, 2) rotate(600deg);
+  -webkit-transform: scale(5, 2) rotate(600deg);
+  -ms-transform: scale(5, 2) rotate(600deg);
+  transform: scale(5, 2) rotate(600deg);
 }
 
 a.button {
-    background-color: #FFF;
-    width: 100px;
-    padding: 20px;
-    border-radius: 10px;
-    color: #708; 
-    display:inline-block;
-    margin:20px 0;
-    width: 200px;
-    text-decoration:none;
+  background-color: #FFF;
+  width: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  color: #708;
+  display:inline-block;
+  margin:20px 0;
+  width: 200px;
+  text-decoration:none;
 }
 
 p {
-    max-width: 500px;
-    margin: 20px auto;
-    font-size:18px;
+  max-width: 500px;
+  margin: 20px auto;
+  font-size:18px;
 }
 
 .content {
@@ -68,16 +68,16 @@ p {
   padding: 50px;
 }
 /*.content:hover {*/
-  /*font-family: 'Henny Penny', cursive;*/
-  /*-webkit-animation-name: jello;*/
-          /*animation-name: jello;*/
-  /*-webkit-animation-iteration-count: infinite;*/
-          /*animation-iteration-count: infinite;*/
-  /*-webkit-animation-duration: 2s;*/
-          /*animation-duration: 2s;*/
-  /*-webkit-animation-fill-mode: both;*/
-          /*animation-fill-mode: both;*/
-  /*color: cyan;*/
+/*font-family: 'Henny Penny', cursive;*/
+/*-webkit-animation-name: jello;*/
+/*animation-name: jello;*/
+/*-webkit-animation-iteration-count: infinite;*/
+/*animation-iteration-count: infinite;*/
+/*-webkit-animation-duration: 2s;*/
+/*animation-duration: 2s;*/
+/*-webkit-animation-fill-mode: both;*/
+/*animation-fill-mode: both;*/
+/*color: cyan;*/
 /*}*/
 
 h1 {
@@ -88,13 +88,13 @@ h1 {
 a {
   color: #0F0;
   -webkit-transition: all ease 0.3s;
-          transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 a:hover {
   color: #F00;
   -webkit-transform: scale(5, 2) rotate(600deg);
-      -ms-transform: scale(5, 2) rotate(600deg);
-          transform: scale(5, 2) rotate(600deg);
+  -ms-transform: scale(5, 2) rotate(600deg);
+  transform: scale(5, 2) rotate(600deg);
 }
 
 @-webkit-keyframes jello {
@@ -183,14 +183,30 @@ a:hover {
   }
 }
 
+.partner-title{
+  font-size: 1.75em;
+  color: #000;
+  padding:20px;
+}
 
 .partners {
-    line-height: 30px;
+  line-height: 30px;
+  border-radius: 10px;
+  background: #FFF;
 }
 
 .inline-img {
-    display: inline-block;
-    max-height: 110px;
-    width: auto;
-    margin: 50px;
+  display: inline-block;
+  max-height: 75px;
+  width: auto;
+  margin: 50px;
+}
+
+.tilt{
+  display: inline-block;
+  max-height: 75px;
+  width: auto;
+}
+.heroes{
+  padding-bottom: 60px;
 }
