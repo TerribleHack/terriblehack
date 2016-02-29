@@ -21,6 +21,15 @@ body {
   color: #FFF;
 }
 
+.floater{
+  background-image: url(../img/sponsors/troll_face.png);
+  background-size: 8em 8em;
+  width: 8em;
+  height: 8em;
+  position: relative;
+  z-index: 3;
+}
+
 .spacer {
   display: inline-block;
   width:0;
