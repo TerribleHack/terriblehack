@@ -15,11 +15,24 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/prettify.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(function() {
+      $(document).on('click', '#fakescroll', function(event){
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 1000);
+      })});
+    </script>
   </head>
 
   <body id="top" class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
+  <!-- Intro Page -->
+    <div class="fakeout" style="background:white;height:1024px;padding-top:200px;font-size:300%;">
+      <center><FONT COLOR="#000000">Website has moved...</FONT><a href="#overview" id="fakescroll" style="color:blue">CLICK HERE</a></center>
+    </div>
     <div class="container">
-
 
 <!-- Masthead
 ================================================== -->
@@ -27,7 +40,7 @@
   <div class="row">
     <div class="span6">
       <h1><img src="img/test/7upspot.gif">&nbsp;<FONT COLOR="#FF0000">T</FONT><FONT COLOR="#FF5A00">e</FONT><FONT COLOR="#FFB400">r</FONT><FONT COLOR="#FFff00">r</FONT><FONT COLOR="#A5ff00">i</FONT><FONT COLOR="#4Bff00">b</FONT><FONT COLOR="#00ff00">l</FONT><FONT COLOR="#00ffB4">e</FONT><FONT COLOR="#00ff5A"></FONT><blink><FONT COLOR="#00ffff">H</FONT><FONT COLOR="#00B4ff">a</FONT><FONT COLOR="#005Aff">c</FONT><FONT COLOR="#0000ff">k</FONT></blink></h1>
-      <p class="lead">TerribleHack IV: A New Joke</p>
+      <p class="lead">TerribleHack V</p>
       <table cellpadding="2" cellspacing="2">
         <tr>
           <td>
@@ -47,7 +60,12 @@
     </div>
 
   </div>
-  <marquee>heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeellooooooooooooooooooooooooooooooooooooooooooooooooooo!</marquee>
+  <marquee>
+    <FONT COLOR="#00E5FF">~~~~~~~SELLING RUNE SCIMMY~~~~~~~</FONT>
+    <FONT COLOR="#FF00EE">XXOOXOXXX BUYING GF XXOOXOO</FONT>
+    <FONT COLOR="FFFF00">FREE ARMOR TRIMMING!!!!</FONT>  
+    <FONT COLOR="FF0000">FOLLOW TO WILDY FOR SICK LOOT</FONT>
+  </marquee>
   <div class="subnav">
     <ul class="nav nav-pills">
       <li><a href="#about">About</a></li>
@@ -71,9 +89,9 @@
     </div>
     <div class="span4">
       <h1>Disruption Starts Here</h1>
-      <h2>Velocity Start - SCH @ uWaterloo</h2>
-      <h3>July 23, 2016</h3>
-      <h4><a href="https://goo.gl/h6vyKc">Sign up!</a></h4>
+      <h2>Location TBD</h2>
+      <h3>Date TBD (Some time in Fall 2016 term)</h3>
+      <h4><a>Sign up! (SOON)</a></h4>
       <p>Most hackathons are about coming up with innovative new ideas and making plausible startup prototypes. This one is different. This one is about having fun and programming for the sake of programming, even if it means reinventing a less efficient wheel.</p>
       <p>Our award winning hackathon model is on the bleeding edge of disruptive technology and promotes synergistic growth.</p>
       <p>Come to the world's only '10/10' hackathon!</p> 
