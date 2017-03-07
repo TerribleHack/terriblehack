@@ -1,0 +1,204 @@
+@media (max-width:370px){
+	.message,.message_alert,.error{
+		margin: 20px 0 9px !important;
+	}
+	#cas-username input, #cas-password input, #cas-firstname input, #cas-lastname input, #cas-www input, #cas-telephone input, #cas-cellphone input{
+		max-width:initial !important;
+		width:100% !important;
+	}
+	
+	#fm1{
+		max-width:95% !important;
+	}
+	
+	#footer{
+		padding: 10px 0 0 !important;
+	}
+	#logoContainer, #fm1{
+		margin: 0 auto !important;
+	}
+	#forgotPaswC{
+		margin: 10px 0px 8px 0px !important;
+	}
+	#logoContainer{
+		max-width:159px !important;
+	}
+	#cas-username, #cas-password, #cas-firstname, #cas-lastname, #cas-www, #cas-telephone, #cas-cellphone, #cas-smsprovider{
+		padding: 3px 5px 3px 0 !important;
+	}
+}
+
+@media (max-width:450px){
+	#cas-authentication-container{
+		padding:20px 0 !important;
+	}
+}
+
+body{
+    font:101% Verdana,sans-serif;text-align:center;margin:0;
+}
+
+#logoContainer{
+	max-width:200px;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom:17px;
+}
+#logoContainer img{
+	max-width:100%;
+}
+
+#cas-authentication-container{
+    font-size:70%;max-width:506px;text-align:center;margin:0 auto;
+	padding:80px 20px;
+}
+
+#footer{
+	padding:10px;
+	line-height: 1.1rem;
+	max-width: 288px;
+	margin: auto;
+}
+
+input {
+      font-family: sans-serif;                
+  }
+.accesskey {text-decoration:underline;}
+#cas-username,#cas-password,#cas-firstname,#cas-lastname,#cas-www,#cas-telephone,#cas-cellphone,#cas-smsprovider{
+    padding:5px 5px 5px 0;
+}
+
+#cas-password{
+	margin-top: 6px;
+}
+
+#cas-smsprovider select{
+    border:solid 1px #ccc;padding:5px 2px;width:221px;float:right;color:#999;
+}
+
+#cas-username input,#cas-password input,#cas-firstname input,#cas-lastname input,#cas-www input,#cas-telephone input,#cas-cellphone input{
+    border:solid 1px #ccc;padding:5px 2px;color:#999;font-size: 1.25rem; width:100%;
+}
+
+.fieldLabel{
+	text-align: left;
+	font-size: 1rem;
+	margin-bottom:3px;
+}
+
+#msg{
+	line-height: 1.1rem;
+	max-width: 288px;
+	margin: auto;
+}
+
+#cas-submit input:focus,#cas-username input:focus,#cas-password input:focus,#cas-firstname input:focus,#cas-lastname input:focus,#cas-www input:focus,#cas-telephone input:focus,#cas-cellphone input:focus,#cas-smsprovider select:focus{
+    color:#333;
+}
+
+br{
+    clear:both;
+}
+
+.standard label{
+    padding-top:5px;
+}
+
+label{
+    display:block;float:left;width:100px;color:#666;
+}
+
+#topBar{
+	background-color: #333;
+	width: 100%;
+	height: 10px;
+	position: absolute;
+}
+
+#cas-submit, .message,.message_alert,.error{
+    margin:10px 0px 10px;
+}
+
+#cas-submit input{
+    width: 100%;
+	margin: 0;
+	padding: 13px;
+	color:black;
+	background: #fee17b;
+	font-size: 1.6rem;
+	cursor: pointer;
+	border:none;
+	-webkit-appearance: none;
+}
+
+#forgotPaswC{
+	margin-bottom:25px;
+}
+
+#fm1{
+	max-width:288px;
+	margin:25px auto;
+}
+
+#cas-submit input:hover{
+	background: #757575;
+	color: white;
+	
+}
+
+#cas-extra{
+	margin-top:-5px;
+}
+
+.anchorContainer{
+	margin-top: 6px;
+}
+
+.message,.message_alert,.error{
+	border: 1px solid #cb1a46;
+	color: #cb1a46;
+	padding: 15px;
+	margin-bottom: 11px;
+	margin-top: 10px;
+	font-size:11px;
+}
+
+.message a,.message_alert a,.error a{
+	display: inline-block;
+	margin-top: 5px;
+}
+
+.testBox{
+    text-align:left;
+}
+
+.message{
+    background:#eee url(/cas/images/accept.png) no-repeat 10px 6px;
+}
+
+.message_alert{
+    background:#FAF8B6 url(/cas/images/accept.png) no-repeat 10px 6px;
+}
+
+.finish{
+    border-top:solid 1px #eee;padding:15px 0 60px 0;margin:0 auto;padding-left:10px;padding-right:10px;font-size:90%;color:#999;
+}
+
+a{
+    color:black;
+	text-decoration:none;
+	border-bottom: 1px solid #000;
+}
+
+a:hover{
+    text-decoration:none;
+	border-bottom:1px solid #fff;
+}
+
+.keyId{
+    font-size:90%;
+}
+
+#expander{
+    cursor:pointer;
+}
