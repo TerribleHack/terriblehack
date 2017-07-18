@@ -2,6 +2,7 @@ const msgArea = document.querySelector('#msg-area');
 const msgField = document.querySelector('#msg-box');
 const sendBtn = document.querySelector('#msg-send-btn');
 const botTypingArea = document.querySelector('#bot-is-typing-area');
+const botStatusField = document.querySelector('#status');
 
 sendBtn.disabled = true;
 
@@ -17,6 +18,18 @@ msgField.addEventListener('keypress', (e) => {
     sendBtn.disabled = true;
   }
 });
+
+function disconnectBot() {
+  msgField.disabled = true;
+  sendBtn.disabled = true;
+  const msgElement = document.createElement('div');
+  msgElement.appendChild(document.createTextNode('TerribleHack Bot has disconnected.'));
+  msgElement.classList.add('msg', 'msg-announce');
+  msgArea.appendChild(msgElement);
+  botStatusField.classList.remove('status-online');
+  botStatusField.classList.add('status-offline');
+  botStatusField.textContent = ' Offline';
+}
 
 function sendUserMessage(message) {
   const msg = message || "";
@@ -34,17 +47,37 @@ function getBotResponse(message) {
   const msg = message.toLowerCase();
 
   const patterns = [
+    [/\b(hi|hello|hey|howdy)\b/g, 'Hello there!'],
     [/\b(when|where)\b/g, 'TerribleHack 7 will be on July 22 at Shopify Waterloo, from 10:00am to 6:00pm.'],
     [/\b(thank|goose)\b/g, 'thank mr goose'],
+    [/(\bwater\b)+/g, 'loo loo loo'],
+    [/^f$/, 'E'],
+    [/^e$/, 'R'],
+    [/^r$/, 'I'],
+    [/^i$/, 'D'],
+    [/^d$/, 'U'],
+    [/^u$/, 'N'],
+    [/^n$/, 'honk honk'],
+    [/\bhonk\b/g, 'honk honk'],
+    [/\b(remote|remotely|skype)\b/g, 'Yeah you can work remotely.'],
     [/\b(facebook|fb)\b/g, 'The event is at https://www.facebook.com/events/133574963908298/'],
-    [/\b(pay|money|tilt|gofundme|cash|credit|debit|watcard)\b/g, 'You can support TerribleHack 7 at the GoFundMe (https://www.gofundme.com/terriblehack-7)!'],
-  ]
+    [/\b(free|food|pizza|catering|pay|money|tilt|gofundme|cash|credit|debit|watcard)\b/g, 'You can support TerribleHack 7 at the GoFundMe (https://www.gofundme.com/terriblehack-7)!'],
+  ];
+
+  const randomMsgs = [
+    'honk',
+    'thank mr goose',
+    'Most hackathons are about coming up with innovative new ideas and making plausible startup prototypes. This one is different. This one is about having fun.',
+    'F',
+    'I am just a simple bot, my purpose is to direct you to https://www.facebook.com/events/133574963908298/',
+    'TODO: come up with more answers',
+  ];
 
   const newMsgs = patterns.filter(p => p[0].test(msg)).map(p => p[1]);
   if (newMsgs.length) {
     pendingBotMessages.push(...newMsgs);
   } else {
-    pendingBotMessages.push('TODO: give an answer');
+    pendingBotMessages.push(randomMsgs[Math.floor(randomMsgs.length * Math.random())]);
   }
   doBotTalk();
 }

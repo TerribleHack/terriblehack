@@ -25,13 +25,22 @@ body {
   /*text-transform: uppercase;*/
 }
 
-#status:before {
+#status.status-online:before {
   display: inline-block;
   content: '';
   width: 15px;
   height: 15px;
   border-radius: 7.5px;
   background-color: lawngreen;
+}
+
+#status.status-offline:before {
+  display: inline-block;
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 7.5px;
+  background-color: red;
 }
 
 #status-message > a {
