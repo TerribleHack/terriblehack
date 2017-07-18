@@ -46,7 +46,14 @@ function getBotResponse(message) {
   } else {
     pendingBotMessages.push('TODO: give an answer');
   }
+  doBotTalk();
+}
 
+function doBotTalk() {
+  if (!pendingBotMessages.length) {
+    botTypingArea.hidden = true;
+    return;
+  }
 
   const typingDelay = 500 + Math.random() * 1000;
   const responseDelay = 2000 + Math.random() * 3000;
@@ -65,5 +72,6 @@ function getBotResponse(message) {
     }
 
     botTypingArea.hidden = !pendingBotMessages.length
+    doBotTalk();
   }, responseDelay);
 }
