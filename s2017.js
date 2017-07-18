@@ -66,7 +66,7 @@ function getBotResponse(message) {
     [/\bhonk\b/g, 'honk honk'],
     [/\( ͡° ͜ʖ ͡°\)/g, '( ͡° ͜ʖ ͡°)'],
     [/\b(htn|north)\b/g, 'Hack the North is at http://hackthenorth.com/!'],
-    [/\b(remote|remotely|skype)\b/g, 'Yeah you can work remotely.'],
+    [/\b(remote|remotely|skype)\b/g, 'We\'ll have a devpost, but we\'d love to have you in person too!'],
     [/\b(facebook|fb)\b/g, 'The event is at https://www.facebook.com/events/133574963908298/'],
     [/\b(free|food|pizza|catering|pay|money|tilt|gofundme|cash|credit|debit|watcard)\b/g, 'You can support TerribleHack 7 at the GoFundMe (https://www.gofundme.com/terriblehack-7)!'],
   ];
