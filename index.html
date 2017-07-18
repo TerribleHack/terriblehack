@@ -1,48 +1,50 @@
-<!-- inb4 Mr. Panino and Mr. Goose -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>TerribleHack Waterloo</title>
-    <meta name="description" content="You're in the wrong corner of the Internet buddy">
-    <meta name="author" content="TerribleHack">
-    <style>
-        #everything {
-            float:left;
-            background-image: url('whiteboard.jpg');
-            background-size:cover;
-        }
-
-        img {
-            transition: all linear 0.5s;
-        }
-
-        #everything:hover img{
-            opacity: 0;
-        }
-
-        br {
-            clear: both;
-        }
-
-        @media all and (max-width: 1024px) {
-            img {
-                opacity: 0;
-            }
-        }
-    </style>
-  </head>
-
-  <body>
-    <div id="everything">
-    <img src="bts.png" alt="There's no hope if you can't see this." usemap="#Map" />
-    <map name="Map" id="Map">
-        <area alt="Sign up" title="Sign up" href="https://goo.gl/forms/uVsymycmlwxSXzmW2" shape="poly" coords="416,355,372,384,365,429,422,453,491,454,537,411,518,365,470,353" />
-        <area alt="Donate" title="Donate" href="https://www.tilt.com/tilts/terriblehack-the-6ix" shape="poly" coords="649,341,595,357,579,405,592,445,664,466,734,457,751,399,708,363" />
-        <area alt="FB RSVP" title="FB RSVP" href="https://www.facebook.com/events/980923792038460/" shape="poly" coords="879,354,830,373,807,420,847,470,949,469,985,403,941,352" />
-    </map>
+<html>
+<head>
+  <title>TerribleHack VII</title>
+  <meta property="og:title" content="TerribleHack VII" />
+  <meta property="og:type" content="" />
+  <meta property="og:image" content="http://terriblehack.website/s2017/th7_logo.png" />
+  <meta property="og:description" content="This 👇 Saturday 📅 is ☑️ TERRIBLEHACK 🚫🦆👨‍💻 SEVEN 7️⃣!" />
+  <link rel="stylesheet" href="style_s2017.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="s2017.js" async></script>
+</head>
+<body>
+  <div id="header">
+    <a href="https://www.facebook.com/terriblehack/" target="_blank"><img id="top-logo" src="th7_logo.png" /></a>
+    <div id="header-text-area">
+      <p id="header-title">
+        TerribleHack VII
+      </p>
+      <p id="status">
+        Online
+      </p>
+      <p id="status-message">
+        <a href="https://www.facebook.com/events/133574963908298/">
+          <span style="color:blue">facebook event</span>
+        </a>
+        <a href="https://www.gofundme.com/terriblehack-7">
+          <span style="color:white">go</span><span style="color:lightgreen">fund</span><span style="color:white">me</span>
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGbAx8YOvnRE6AJucOL_k-haXJD-YnqGhq-E7YoKoC6sFPfg/viewform">
+          <span style="color:yellow">signup form</span>
+        </a>
+      </p>
     </div>
-    <br />
-    <a href="waterloo.html">TerribleHack Exam Bank</a>
-  </body>
-  </html>
+  </div>
+
+  <div id="msg-area">
+    <div class="msg msg-announce">
+      You are now chatting with TerribleHack Bot.
+    </div>
+  </div>
+
+  <div id="bot-is-typing-area" hidden="">TerribleHack Bot is typing...</div>
+
+  <div id="msg-send-area">
+    <textarea id="msg-box" placeholder="What's on your mind?" autofocus></textarea>
+    <button id="msg-send-btn" type="button" name="send-btn">Send</button>
+  </div>
+
+</body>
+</html>
