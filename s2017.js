@@ -44,6 +44,11 @@ function sendUserMessage(message) {
 const pendingBotMessages = [];
 
 function getBotResponse(message) {
+  if (isUnacceptable(message)) {
+    disconnectBot();
+    return;
+  }
+
   const msg = message.toLowerCase();
 
   const patterns = [
@@ -107,4 +112,13 @@ function doBotTalk() {
     botTypingArea.hidden = !pendingBotMessages.length
     doBotTalk();
   }, responseDelay);
+}
+
+function isUnacceptable(message) {
+  const badWords = [
+    'uoft',
+    'toronto',
+    'panino',
+  ]
+  return badWords.some((word) => message.toLowerCase().indexOf(word) >= 0);
 }
