@@ -53,7 +53,7 @@ function getBotResponse(message) {
 
   const patterns = [
     [/\b(hi|hello|hey|howdy)\b/g, 'Hello there!'],
-    [/\b(when|where)\b/g, 'TerribleHack 7 will be on July 22 at Shopify Waterloo, from 10:00am to 6:00pm.'],
+    [/\b(when|where|time|place|shopify|spotify)\b/g, 'TerribleHack 7 will be on July 22 at Shopify Waterloo, from 10:00am to 6:00pm.'],
     [/\b(thank|goose)\b/g, 'thank mr goose'],
     [/(\bwater\b)+/g, 'loo loo loo'],
     [/^f$/, 'E'],
@@ -64,6 +64,8 @@ function getBotResponse(message) {
     [/^u$/, 'N'],
     [/^n$/, 'honk honk'],
     [/\bhonk\b/g, 'honk honk'],
+    [/\( ͡° ͜ʖ ͡°\)/g, '( ͡° ͜ʖ ͡°)'],
+    [/\b(htn|north)\b/g, 'Hack the North is at http://hackthenorth.com/!'],
     [/\b(remote|remotely|skype)\b/g, 'Yeah you can work remotely.'],
     [/\b(facebook|fb)\b/g, 'The event is at https://www.facebook.com/events/133574963908298/'],
     [/\b(free|food|pizza|catering|pay|money|tilt|gofundme|cash|credit|debit|watcard)\b/g, 'You can support TerribleHack 7 at the GoFundMe (https://www.gofundme.com/terriblehack-7)!'],
@@ -76,6 +78,7 @@ function getBotResponse(message) {
     'F',
     'I am just a simple bot, my purpose is to direct you to https://www.facebook.com/events/133574963908298/',
     'TODO: come up with more answers',
+    '( ͡° ͜ʖ ͡°)',
   ];
 
   const newMsgs = patterns.filter(p => p[0].test(msg)).map(p => p[1]);
