@@ -1,0 +1,90 @@
+@font-face {
+  font-family: ComicSans;
+  src: url('comic_sans.ttf');
+}
+
+body {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  height: 100%;
+}
+
+* {
+  font-family: ComicSans;
+}
+
+#header {
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  background-color: deepskyblue;
+}
+
+#header-title {
+  text-transform: uppercase;
+}
+
+#status:before {
+  display: inline-block;
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 7.5px;
+  background-color: lawngreen;
+}
+
+#top-logo {
+  width: 128px;
+  height: 128px;
+  margin: 8px;
+}
+
+#msg-area {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.msg {
+  margin-bottom: 4px;
+}
+
+.msg-announce {
+  padding: 8px;
+  background-color: paleturquoise;
+}
+
+.msg-user:before {
+  content: '> ';
+}
+
+.msg-bot {
+  font-family: monospace;
+}
+
+.msg:not(.msg-announce) {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+#bot-is-typing-area {
+  padding: 8px;
+}
+
+#msg-send-area {
+  display: flex;
+  background-color: red;
+}
+
+#msg-box {
+  flex: 1;
+  resize: none;
+  height: 64px;
+}
+
+#msg-send-btn {
+
+}
