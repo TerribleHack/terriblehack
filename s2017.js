@@ -6,6 +6,12 @@ const botStatusField = document.querySelector('#status');
 
 sendBtn.disabled = true;
 
+sendBtn.addEventListener('click', () => {
+  sendUserMessage(msgField.value);
+  msgField.value = '';
+  sendBtn.disabled = true;
+});
+
 msgField.addEventListener('input', () => {
   sendBtn.disabled = !msgField.value;
 });
