@@ -34,6 +34,10 @@ body {
   background-color: lawngreen;
 }
 
+#status-message > a {
+  text-decoration: none;
+}
+
 #top-logo {
   width: 128px;
   height: 128px;
@@ -63,6 +67,10 @@ body {
 
 .msg-bot {
   font-family: monospace;
+}
+
+.msg-bot:before {
+  content: ' ';
 }
 
 .msg:not(.msg-announce) {
