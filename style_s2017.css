@@ -22,7 +22,7 @@ body {
 }
 
 #header-title {
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 #status:before {
