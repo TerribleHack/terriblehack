@@ -28,22 +28,27 @@ msgField.addEventListener('keypress', (e) => {
 function disconnectBot() {
   msgField.disabled = true;
   sendBtn.disabled = true;
-  const msgElement = document.createElement('div');
-  msgElement.appendChild(document.createTextNode('TerribleHack Bot has disconnected.'));
-  msgElement.classList.add('msg', 'msg-announce');
-  msgArea.appendChild(msgElement);
+  appendMessage('msg-announce', 'TerribleHack Bot has disconnected.');
+  setBotTypingAreaVisiblity(false);
   botStatusField.classList.remove('status-online');
   botStatusField.classList.add('status-offline');
   botStatusField.textContent = ' Offline';
 }
 
-function sendUserMessage(message) {
-  const msg = message || "";
-  const msgElement = document.createElement('div');
-  msgElement.appendChild(document.createTextNode(msg.trim()));
-  msgElement.classList.add('msg', 'msg-user');
-  msgArea.appendChild(msgElement);
+function botIsOffline() {
+  return botStatusField.textContent === ' Offline';
+}
 
+function appendMessage(messageClass, message) {
+  const msgElement = document.createElement('div');
+  msgElement.appendChild(document.createTextNode(message.trim()));
+  msgElement.classList.add('msg', messageClass);
+  msgArea.appendChild(msgElement);  
+  msgArea.scrollTop = msgArea.scrollHeight;
+}
+
+function sendUserMessage(msg) {
+  appendMessage('msg-user', msg);
   getBotResponse(msg);
 }
 
@@ -96,9 +101,14 @@ function getBotResponse(message) {
   doBotTalk();
 }
 
+function setBotTypingAreaVisiblity(isVisible) {
+  botTypingArea.hidden = !isVisible;
+  msgArea.scrollTop = msgArea.scrollHeight;
+}
+
 function doBotTalk() {
   if (!pendingBotMessages.length) {
-    botTypingArea.hidden = true;
+    setBotTypingAreaVisiblity(false);
     return;
   }
 
@@ -106,19 +116,16 @@ function doBotTalk() {
   const responseDelay = 2000 + Math.random() * 3000;
 
   setTimeout(() => {
-    botTypingArea.hidden = !pendingBotMessages.length
+    setBotTypingAreaVisiblity(pendingBotMessages.length && !botIsOffline());
   }, typingDelay);
 
   setTimeout(() => {
     const botMsg = pendingBotMessages.shift();
-    if (botMsg) {
-      const newMsg = document.createElement('div');
-      newMsg.appendChild(document.createTextNode(botMsg));
-      newMsg.classList.add('msg', 'msg-bot');
-      msgArea.appendChild(newMsg);
+    if (botMsg && !botIsOffline()) {
+      appendMessage('msg-bot', botMsg);
     }
 
-    botTypingArea.hidden = !pendingBotMessages.length
+    setBotTypingAreaVisiblity(pendingBotMessages.length && !botIsOffline());
     doBotTalk();
   }, responseDelay);
 }
