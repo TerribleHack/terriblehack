@@ -64,7 +64,7 @@ function getBotResponse(message) {
 
   const patterns = [
     [/\b(hi|hello|hey|howdy)\b/g, 'Hello there!'],
-    [/\b(when|where|time|place|shopify|spotify)\b/g, 'TerribleHack 7 will be on either July 29th or August 5th at Shopify Waterloo, from 10:00am to 6:00pm.  Stay tuned!'],
+    [/\b(when|where|time|place|shopify|spotify)\b/g, 'TerribleHack 7 will be on August 12th at Shopify Waterloo, from 10:00am to 6:00pm.'],
     [/\b(thank|goose)\b/g, 'thank mr goose'],
     [/(\bwater\b)+/g, 'loo loo loo'],
     [/^f$/, 'E'],
