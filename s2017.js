@@ -66,6 +66,7 @@ function getBotResponse(message) {
     [/\b(hi|hello|hey|howdy)\b/g, 'Hello there!'],
     [/\b(when|where|time|place|shopify|spotify)\b/g, 'TerribleHack 7 will be on August 12th at Shopify Waterloo, from 10:00am to 6:00pm.'],
     [/\b(thank|goose)\b/g, 'thank mr goose'],
+    [/\b(register|registration|join|sign|up|signup|form)\b/g, 'The signup form is at https://docs.google.com/forms/d/e/1FAIpQLSdGbAx8YOvnRE6AJucOL_k-haXJD-YnqGhq-E7YoKoC6sFPfg/viewform.'],
     [/(\bwater\b)+/g, 'loo loo loo'],
     [/^f$/, 'E'],
     [/^e$/, 'R'],
