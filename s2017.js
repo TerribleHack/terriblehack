@@ -64,7 +64,7 @@ function getBotResponse(message) {
 
   const patterns = [
     [/\b(hi|hello|hey|howdy)\b/g, 'Hello there!'],
-    [/\b(when|where|time|place|shopify|spotify)\b/g, 'TerribleHack 7 will be on August 12th at Shopify Waterloo, from 10:00am to 6:00pm.'],
+    [/\b(when|where|time|place|shopify|spotify)\b/g, 'TerribleHack 7 will be on August 12th at Mathematics 3 on UW campus, from 10:00am to 6:00pm. (Location was changed due to scheduling conflicts)'],
     [/\b(thank|goose)\b/g, 'thank mr goose'],
     [/\b(register|registration|join|sign|up|signup|form)\b/g, 'The signup form is at https://docs.google.com/forms/d/e/1FAIpQLSdGbAx8YOvnRE6AJucOL_k-haXJD-YnqGhq-E7YoKoC6sFPfg/viewform.'],
     [/(\bwater\b)+/g, 'loo loo loo'],
@@ -80,7 +80,7 @@ function getBotResponse(message) {
     [/\b(htn|north)\b/g, 'Hack the North is at http://hackthenorth.com/!'],
     [/\b(remote|remotely|skype)\b/g, 'We\'ll have a devpost, but we\'d love to have you in person too!'],
     [/\b(facebook|fb)\b/g, 'The event is at https://www.facebook.com/events/133574963908298/'],
-    [/\b(free|food|pizza|catering|pay|money|tilt|gofundme|cash|credit|debit|watcard)\b/g, 'You can support TerribleHack 7 at the GoFundMe (https://www.gofundme.com/terriblehack-7)!'],
+    [/\b(free|food|pizza|catering|pay|money|tilt|gofundme|cash|credit|debit|watcard)\b/g, 'If you\'d like to support TerribleHack or pitch in for food, we can accept payment at the event (cash only)'],
   ];
 
   const randomMsgs = [
