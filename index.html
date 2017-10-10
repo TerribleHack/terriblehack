@@ -3,17 +3,19 @@
   <head>
     <title>Terriblehack X</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="smooth-scroll.min.js"></script>
   </head>
   <body>
+    <div id='x'></div>
     <nav>
       <div class="nav-content">
         <h1>Terriblehack X</h1>
-        <a href="#">Overview</a>
-        <a href="#">Specs</a>
-        <a class="pricing" href="#">Pricing</a>
+        <a data-scroll href="#overview">Overview</a>
+        <a data-scroll href="#specs">Specs</a>
+        <a data-scroll class="pricing" href="#pricing">Pricing</a>
       </div>
     </nav>
-    <section>
+    <section id="overview">
       <div class="img-holder">
         <img src="terriblehackx.png" />
       </div>
@@ -25,15 +27,19 @@
       <h2>It's all memes.</h2>
       <img id="allmemes" src="allmemes.png" />
     </section>
-    <section>
+    <section id="specs">
       <h2>Specs</h2>
       <p>With no charging cable required, Terriblehack X is truly designed for the future of wireless. Simply place your Terriblehack X in the garbage and order a new one, and you'll be good to go with a full charge. The future is now.</p>
       <p></p>
     </section>
-    <section>
+    <section id="pricing">
       <h2>Pricing</h2>
       <p>You can give us money. Or don't. <strong>But we turn your generous donations into pizza for you.</strong> So if you have a few dollars to spare, help us help you stuff your face orifices with edible material.</p>
-      <p></p>
+      <p class="centered"><a href="#" class="button large">Donate your hard earned cash</a></p>
+      <img src="pizza.png" />
     </section>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
   </body>
 </html>
