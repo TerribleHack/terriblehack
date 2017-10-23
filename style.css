@@ -181,3 +181,9 @@ section:first-of-type {
     opacity: 0;
   }
 }
+
+@media all and (max-width: 600px) {
+  body {
+    font-size:0.75em;
+  }
+}
