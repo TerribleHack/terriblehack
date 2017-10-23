@@ -22,8 +22,10 @@ section.odd {
 img {
   display: block;
   flex: 0;
-  height: 90vh;
+  height: auto;
   width: auto;
+  max-width: 100%;
+  max-height: 90vh;
   margin: 0 auto;
 }
 
@@ -137,6 +139,7 @@ section:first-of-type {
   align-self: flex-end;
   width: 90%;
   height: auto;
+  max-height: none;
   z-index: 1;
 }
 
