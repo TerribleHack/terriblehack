@@ -1,51 +1,54 @@
+<!doctype html>
 <html>
-<head>
-  <title>TerribleHack VII</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta property="og:title" content="TerribleHack VII" />
-  <meta property="og:type" content="" />
-  <meta property="og:image" content="http://terriblehack.website/s2017/th7_logo.png" />
-  <meta property="og:description" content="This 👇 Saturday 📅 is ☑️ TERRIBLEHACK 🚫🦆👨‍💻 SEVEN 7️⃣!" />
-  <link rel="stylesheet" href="style_s2017.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="s2017.js" async></script>
-</head>
-<body>
-  <div id="header">
-    <a href="https://www.facebook.com/terriblehack/" target="_blank"><img id="top-logo" src="th7_logo.png" /></a>
-    <div id="header-text-area">
-      <p id="header-title">
-        TerribleHack VII (Spring 2017)
-      </p>
-      <p id="status" class="status-online">
-        Online
-      </p>
-      <p id="status-message">
-        <a href="https://www.facebook.com/events/133574963908298/">
-          <span style="color:blue">facebook event</span>
-        </a>
-        <a href="https://www.gofundme.com/terriblehack-7">
-          <strike><span style="color:white">go</span><span style="color:lightgreen">fund</span><span style="color:white">me</span></strike>
-        </a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGbAx8YOvnRE6AJucOL_k-haXJD-YnqGhq-E7YoKoC6sFPfg/viewform">
-          <span style="color:yellow">signup form</span>
-        </a>
-      </p>
-    </div>
-  </div>
-
-  <div id="msg-area">
-    <div class="msg msg-announce">
-      You are now chatting with TerribleHack Bot.
-    </div>
-  </div>
-
-  <div id="bot-is-typing-area" hidden="">TerribleHack Bot is typing...</div>
-
-  <div id="msg-send-area">
-    <textarea id="msg-box" placeholder="What's on your mind?" autofocus></textarea>
-    <button id="msg-send-btn" type="button" name="send-btn">Send</button>
-  </div>
-
-</body>
+  <head>
+    <title>TerribleHack X</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="smooth-scroll.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="TerribleHack X" />
+    <meta property="og:image" content="http://terriblehack.website/terriblehackx.png" />
+    <meta property="og:description" content="On Nov 12, join us for a bezel-free (except the top notch) hackathon!" />
+  </head>
+  <body>
+    <div id='x'></div>
+    <nav>
+      <div class="nav-content">
+        <h1>TerribleHack X</h1>
+        <a data-scroll href="#overview">Overview</a>
+        <a data-scroll href="#specs">Specs</a>
+        <a data-scroll class="pricing" href="#pricing">Pricing</a>
+      </div>
+    </nav>
+    <section id="overview">
+      <div class="img-holder">
+        <img src="terriblehackx.png" />
+      </div>
+      <h1>TerribleHack X</h1>
+      <h4>Nov 12, M3 1003</h4>
+      <h3>Our vision has always been to create a TerribleHack that is entirely memes. One so immersive the event itself disappears into the experience. And so intelligent it can respond to a tap, your voice and even a glance. With TerribleHack X, that vision is now a reality. Say hello to the future. Also <a data-scroll href="#pricing">help pay for food!</a></h3>
+    </section>
+    <section class="odd">
+      <h4>Design and Display</h4>
+      <h2>It's all memes.</h2>
+      <img id="allmemes" src="allmemes.png" />
+    </section>
+    <section id="specs">
+      <h2>Specs</h2>
+      <p>With no charging cable required, TerribleHack X is truly designed for the future of wireless. Simply place your TerribleHack X in the garbage and order a new one, and you'll be good to go with a full charge. The future is now.</p>
+      <p></p>
+    </section>
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <p>You can give us money. Or don't. <strong>But we turn your generous donations into food for you.</strong> So if you have a few dollars to spare, help us help you stuff your face orifices with edible material.</p>
+      <p class="centered"><a href="https://www.gofundme.com/terriblehack-x" class="button large">Donate your hard earned cash</a></p>
+      <img src="pizza.png" />
+    </section>
+    <section id="8" class="odd">
+      <h2>TerribleHack 8</h2>
+      <p>We released a less-featured TerribleHack at the same time to cannibalize our own sales. Our top economists proved that this would yield the maximum disruption. The proof is trivial and is left as an exercise for the reader.</p>
+    </section>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+  </body>
 </html>
