@@ -29,7 +29,7 @@ img {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, p, .review {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
@@ -145,6 +145,26 @@ section:first-of-type {
 
 .centered {
   text-align: center;
+}
+
+.review {
+  margin-bottom: 20px;
+}
+
+.review p {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.review .name {
+  display: block;
+  font-style: italic;
+  text-align: right;
+}
+
+.review .content {
+  padding-left: 20px;
+  border-left: 4px solid rgba(0,0,0,0.2);
 }
 
 #x {
