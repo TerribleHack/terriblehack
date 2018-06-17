@@ -1,0 +1,21 @@
+{
+  "name": "terriblecoin",
+  "version": "1.0.0",
+  "description": "TO THE MOON",
+  "main": "index.js",
+  "repository": "git@github.com:TerribleHack/terriblecoin.git",
+  "author": "Dave Pagurek <dave@davepagurek.com>",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^4.12.0",
+    "yarn": "^1.7.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "webpack-cli": "^3.0.8"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  }
+}

@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  flex: 0;
+  justify-content: center;
+  position: relative;
+}
+
+section.odd {
+  background-color:#EEEEEE;
+}
+
+img {
+  display: block;
+  flex: 0;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 90vh;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, p, .review {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  z-index: 2;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+  line-height: 2em;
+}
+
+h2 {
+  text-align: center;
+  font-size: 4em;
+  line-height: 1em;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.8em;
+  margin-bottom: 1em;
+}
+
+h4 {
+  text-align: center;
+  font-size: 2em;
+  line-height: 2.2em;
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1.8em;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 3;
+}
+
+.nav-content {
+  padding: 0 20px;
+  max-width: 900px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 1.5em;
+  line-height: 80px;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+nav a, a.button {
+  flex: 0;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #999;
+  margin-left: 20px;
+  display: block;
+  transition: all 0.2s ease-out;
+}
+
+nav a.pricing, a.button {
+  background: #7abcff; /* Old browsers */
+  background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+  color: #FFF;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+a.button.large {
+  font-size: 2em;
+  max-width: 400px;
+  padding: 0.5em 1em;
+  font-weight: lighter;
+  display: inline-block;
+}
+
+nav a:hover, a.button:hover {
+  transform: translateY(-2px);
+}
+
+section:first-of-type {
+  margin-top: 80px;
+}
+
+#allmemes {
+  position: relative;
+  margin: 0;
+  margin-bottom: -20px;
+  align-self: flex-end;
+  width: 90%;
+  height: auto;
+  max-height: none;
+  z-index: 1;
+}
+
+.centered {
+  text-align: center;
+}
+
+.review {
+  margin-bottom: 20px;
+}
+
+.review p {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.review .name {
+  display: block;
+  font-style: italic;
+  text-align: right;
+}
+
+.review .content {
+  padding-left: 20px;
+  border-left: 4px solid rgba(0,0,0,0.2);
+}
+
+#x {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 150, 200, 0.3);
+  background-image: url('x-mask.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 9001;
+  animation: 1s ease-in 1s x-transition;
+  animation-fill-mode: both;
+}
+
+@keyframes x-transition {
+  from {
+    transform: scale(1);
+  }
+
+  99% {
+    background-color: rgba(255, 150, 200, 0);
+    transform: scale(5) rotate(180deg);
+    opacity: 0;
+  }
+
+  to {
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transform: unset;
+    opacity: 0;
+  }
+}
+
+@media all and (max-width: 600px) {
+  body {
+    font-size:0.75em;
+  }
+}
