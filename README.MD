@@ -1,7 +1,7 @@
 TerribleHack
 ===========
 
-A website for the "Terrible Ideas Hackathon" at uWaterloo!
+A website for the "Terrible Ideas Hackathon" at uWaterloo! 10+ Successful Hackathons and counting!
 
 Current site: https://terriblehack.website/
 
