@@ -144,6 +144,44 @@ span.roulette span.visible:before {
   animation: glitch2 3s 1 linear alternate-reverse;
 }
 
+.item {
+  align-self: stretch;
+  margin-bottom: 20px;
+}
+
+.item label {
+  display: block;
+}
+
+.item input {
+  width: 100%;
+  max-width: 400px;
+  padding: 5px;
+}
+
+#result {
+  color: rgba(255,255,255,0);
+  transition: all ease 0.5s; 
+  transition-delay: 3s;
+  background-image: url("thumbnail.jpg");
+  background-size: 200px 259px;
+  background-position: top;
+  width: 200px;
+  height: 259px;
+  position: relative;
+}
+
+#result #uploading {
+  position: absolute;
+  bottom:-30px;
+}
+
+#result.hidden {
+  color: rgba(255,255,255,1);
+  height: 0;
+  margin-bottom:30px;
+}
+
 @keyframes glitch1 {
   0% {
     clip: rect(6px, 450px, 9px, 0);

@@ -32,3 +32,18 @@ Array.from(document.querySelectorAll('span.roulette')).forEach(roulette => {
 
   pickOption();
 });
+
+const picker = document.getElementById('picker');
+picker.addEventListener('change', () => {
+  document.getElementById('result').classList.remove('hidden');
+  document.getElementById('uploading').innerText = 'Uploading...';
+});
+
+const portfolio = document.getElementById('portfolio');
+portfolio.addEventListener('input', () => {
+  const full = 'https://www.youtube.com/watch?v=CSmRCbjmjno';
+  const typed = portfolio.value;
+
+  const replaced = full.substring(0, typed.length);
+  portfolio.value = replaced;
+});
