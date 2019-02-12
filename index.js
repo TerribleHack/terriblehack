@@ -47,3 +47,22 @@ portfolio.addEventListener('input', () => {
   const replaced = full.substring(0, typed.length);
   portfolio.value = replaced;
 });
+
+const nameInput = document.getElementById('name');
+const companyInput = document.getElementById('company');
+const geeseInput = document.getElementById('geese');
+const applyLink = document.getElementById('apply');
+
+const getLink = () => {
+  const name = encodeURIComponent(nameInput.value);
+  const company = encodeURIComponent(companyInput.value);
+  const geese = encodeURIComponent(geeseInput.value);
+
+  return `https://docs.google.com/forms/d/e/1FAIpQLSdtcHShBKsvr_s-zsJf97dWL2HnjHgndAxl2hL8DWl1Q7x8DA/viewform?usp=pp_url&entry.252297171=${name}&entry.1661162452=${company}&entry.172297209=https://www.youtube.com/watch?v%3DCSmRCbjmjno&entry.825959223=${geese}`;
+};
+
+[nameInput, companyInput, geeseInput].forEach(input => {
+  input.addEventListener('change', () => {
+    applyLink.setAttribute('href', getLink());
+  });
+});
