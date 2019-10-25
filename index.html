@@ -1,84 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <title>TerribleHack XIII</title>
+    <title>TerribleHack XII</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <script src="smooth-scroll.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="TerribleHack XII" />
+    <meta property="og:image" content="http://terriblehack.website/terriblehackx.png" />
+    <meta property="og:description" content="On Nov 12, join us for a bezel-free (except the top notch) hackathon!" />
   </head>
   <body>
-    <section id="intro">
-      <h1>TerribleHack XIII</h1>
-      <h2>It's gonna <span class="avoid-break">be <span id="big-1">b</span><span id="big-2">i</span><span id="big-1">g</span><span></h2>
-      <p>We're a stealth mode startup. We can't say what we're up to, but we guarantee that the world will never be the same after we launch. <a href="#application">Attend the event</a> and <a href="https://www.facebook.com/events/316698152296365/">check out the Facebook event!</a></p>
-      <p><a href="https://hackcodeofconduct.org/977-terriblehack">Code of Conduct</a></p>
+    <div id='x'></div>
+    <nav>
+      <div class="nav-content">
+        <h1>TerribleHack XII</h1>
+        <a data-scroll href="#overview">Overview</a>
+        <a data-scroll href="#specs">Specs</a>
+        <a data-scroll class="pricing" href="#pricing">Pricing</a>
+      </div>
+    </nav>
+    <section id="overview">
+      <div class="img-holder">
+        <img src="terriblehackx.png" />
+      </div>
+      <h1>TerribleHack XII</h1>
+      <h4>Nov 9th, AHS 1689 (You can remember it with one six ate nine)</h4>
+      <h3>Ever been to a hackathon and had trouble coming with good ideas? At TerribleHack, you can build out all of your stupid ideas while still challenging your engineering skills. TerribleHack is not just a hackathon, it is a state of consciousness.
     </section>
-    <section id="hiring">
-      <h3>About TerribleHack</h3>
-
-      <p>Most hackathons are about coming up with innovative new ideas and making plausible startup prototypes. This one is different. This one is about having fun!</p>
-
-      <p>You are invited to come and create something disgustingly beautiful. Join us <strong>March 10, STC 1012, University of Waterloo</strong>, hosted with the CS Club and MathSoc.</p>
-
-      <p style="text-align: center">Attend the event by <a class="button" href="#application">filling out our job application!</a></p>
-
-      <h3>Apply for an opening as a <span class="roulette"><span>Data Messiah</span><span>Maker of Things</span><span>Information Agitator</span><span>Architect-in-Residence</span><span>Performance Sherpa</span><span>Coding Ninja</span><span>Software Ninjaneer</span></span></h3>
-
-      <p>Our team is going to <span class="roulette"><span>disrupt</span><span>democratize</span><span>revolutionize</span><span>rock the core of</span></span> technology as we know it. Our product is so influential that we would barely be able to tell you about it if we wanted to, but to be clear, we don't want to, because the world isn't ready for it quite yet. That's where you come in!</p>
-
-      <p>We want your <span class="roulette"><span>deep learning</span><span>internet-of-things</span><span>microservice architecture</span><span>distributed computing</span><span>real-time programming</span><span>cryptocurrency</span><span>blockchain</span></span> expertise to help our team ascend to new levels of enlightenment so that we can bring our work to the public. We can't tell you what it's for, but you will need at least <span class="roulette"><span>20 dog years</span><span>29200 Bee Movie viewings</span><span>3 presidential terms</span><span>two world wars</span><span>3 elephant pregnancies</span></span> worth of experience with <span class="roulette"><span>CSS4</span><span>ES8</span><span>Go 3</span><span>Python 4</span><span>C++38</span><span>Fortran</span><span>COBOL</span><span>Racket</span></span> to be able to behold the work we've done so far without literally melting.</p>
-
-      <p>Our team culture is really loose and flexible. We work hard and play hard, and we look for similar-minded people to fill in our team.</p>
-
-      <p>By applying to this job opening, you agree to a preliminary team on-site on March 10, 2019 at the University of Waterloo. The on-site will be in the form of a terrible hackathon. Food will be provided.</p>
-
-      <h4>Minimum Qualifications</h4>
-      <ul>
-        <li>20 years of experience working with <span class="roulette"><span>Node.js</span><span>PHP</span><span>Machine learning blockchains</span></span></li>
-        <li>Must have k u b e r n e t e s experience even if you don't know what it means</li>
-        <li>Must be okay with receiving @channel mentions at 3am</li>
-        <li>Get it done attitude</li>
-        <li>Literally live inside a container</li>
-        <li>Is literally a ninja</li>
-        <li>Who is also a rockstar</li>
-        <li>With a respectable collection of hats to wear</li>
-      </ul>
-
-      <h3 id="application">Your Application</h3>
-
-      <div class="item">
-        <label>Full name</label>
-        <input id="name" type="text" />
-      </div>
-
-      <div class="item">
-        <label>Email</label>
-        <input id="email" type="text" />
-      </div>
-
-      <div class="item">
-        <label>Current company</label>
-        <input id="company" type="text" />
-      </div>
-
-      <div class="item">
-        <label>Resume (optional)</label>
-        <input id="picker" type="file" />
-        <div id="result" class="hidden"><span id="uploading"></span></div>
-      </div>
-
-      <div class="item">
-        <label>Portfolio URL</label>
-        <input type="text" id="portfolio" />
-      </div>
-
-      <div class="item">
-        <label>Where do the geese go at night?<br /><em>This is a culture fit question.</em></label>
-        <input type="text" id="geese" />
-      </div>
-
-      <p style="text-align: center"><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSdtcHShBKsvr_s-zsJf97dWL2HnjHgndAxl2hL8DWl1Q7x8DA/viewform?usp=pp_url" id="apply">Apply</a></p>
-
-      <p style="text-align: center">...and then check out the <a href="https://www.facebook.com/events/316698152296365/">Facebook event!</a></p>
+    <section class="odd">
+      <h2>And then there were memes.</h2>
+      <img id="allmemes" src="allmemes.png" />
     </section>
-    <script type="text/javascript" src="index.js"></script>
+    <section id="specs">
+      <h2>Specs</h2>
+      <p>
+        Starts at 11AM.
+      </p>
+      <p>
+        Opening ceremonies last 10 minutes, we are hipsters who do not believe in corporate advertising.
+      </p>
+      <p>
+        Subway linner (lunch/dinner), snacks and drinks are here to sustain you.
+      </p>
+      <p>
+        There will be stickers.
+      </p>
+      <p>
+        Demos will happen at around 7pm.
+      </p>
+      <p>
+        There will be some Terrible™ prizes.
+      </p>
+    </section>
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <p>You can give us money. Or don't. <strong>But we turn your generous donations into food for you.</strong> So if you have a few dollars to spare, help us help you stuff your face orifices with edible material.</p>
+      <p class="centered"><a href="https://gf.me/u/v9fm2i" class="button large">Donate your hard earned cash</a></p>
+      <img src="pizza.png" />
+    </section>
+
+    <section>
+      <h2>Sponsors</h2>
+      <p>Want to sponsor us and be able to upload an image of your choice here? There's a <a href='https://gf.me/u/v9fm2i'>GoFundMe</a>!</p>
+    </section>
+    <section class="odd" id="8">
+      <h2>Thank you for listening to my Ted Talk™. </h2>
+    </section>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
   </body>
 </html>
