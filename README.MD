@@ -18,7 +18,7 @@ Current site: https://terriblehack.website/
 
 ## Contributing
 
-When creating a new TerribleHack site, move the previous site into its own folder first.
+When creating a new TerribleHack site, move the previous site into its own folder first. <3 
 
 Here are some files to not move:
 
