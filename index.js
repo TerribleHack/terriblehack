@@ -7,7 +7,7 @@ function preload() {
 }
 
 function setup() {
-  const canvas = createCanvas(700, 500, WEBGL);
+  const canvas = createCanvas(700, 400, WEBGL);
   canvas.parent('canvasContainer');
 
   position = createVector(0, 0, 0);
@@ -21,16 +21,16 @@ function update() {
   velocity.y = 0;
   velocity.z = 0;
   
-  if (keyIsDown(LEFT_ARROW)) { 
+  if (keyIsDown(65)) { 
     velocity.x -= 5; 
   }
-  if (keyIsDown(RIGHT_ARROW)) { 
+  if (keyIsDown(68)) { 
     velocity.x += 5; 
   }
-  if (keyIsDown(UP_ARROW)) { 
+  if (keyIsDown(87)) { 
     velocity.z -= 5; 
   }
-  if (keyIsDown(DOWN_ARROW)) { 
+  if (keyIsDown(83)) { 
     velocity.z += 5; 
   }
   
@@ -57,7 +57,7 @@ function draw() {
   textAlign(CENTER);
   text("Welcome to TerribleHack:\nReal Life", -200, -300);
   textSize(30);
-  text("Explore with arrow keys", -200, -150);
+  text("Explore with WASD", -200, -150);
   pop();
   
   push();
