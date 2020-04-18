@@ -7,13 +7,13 @@ function person(walking) {
   push();
   translate(0, -200, 0);
   scale(0.5);
-  sphere();
+  sphere(50, 10, 10);
   pop();
   
   push();
   translate(0, -120, 0);
   scale(0.5, 1, 0.5);
-  sphere();
+  sphere(50, 10, 10);
   pop();
   
   [-1, 1].forEach(side => {
