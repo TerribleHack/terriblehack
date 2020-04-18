@@ -2,6 +2,8 @@ let position, velocity, camera;
 let lastHeading = 0;
 let font;
 
+let catHeading, catPosition;
+
 function preload() {
   font = loadFont('https://cdn.jsdelivr.net/npm/@typopro/dtp-e-b-garamond@3.7.5/TypoPRO-EBGaramond-Regular.ttf');
 }
@@ -14,6 +16,9 @@ function setup() {
   velocity = createVector(0, 0, 0);
   camera = createVector(0, 0, 0);
   textFont(font);
+
+  catHeading = 0;
+  catPosition = createVector(-800, 0, -100);
 }
 
 function update() {
@@ -37,6 +42,9 @@ function update() {
   position.add(velocity);
   
   camera.add(position.copy().sub(camera).mult(0.2));
+
+  catHeading += random(-0.04, 0.04);
+  catPosition.add(0.4*cos(catHeading), 0, 0.4*sin(catHeading));
 }
 
 function draw() {
@@ -76,11 +84,16 @@ function draw() {
   textSize(24);
   fill(255);
   textAlign(CENTER);
-  text("YOU", 0, 0, 0);
+  text("YOU", 0, 0);
   pop();
   
   push();
   translate(300, 0, 300);
   busStop();
+  pop();
+
+  push();
+  translate(catPosition.x, catPosition.y, catPosition.z);
+  petCat(catHeading);
   pop();
 }
