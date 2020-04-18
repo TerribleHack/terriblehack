@@ -43,7 +43,7 @@ function update() {
   
   camera.add(position.copy().sub(camera).mult(0.2));
 
-  catHeading += random(-0.04, 0.04);
+  catHeading += map(noise(millis()/1000), 0, 1, -0.04, 0.04);
   catPosition.add(0.4*cos(catHeading), 0, 0.4*sin(catHeading));
 }
 
