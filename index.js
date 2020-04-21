@@ -3,6 +3,7 @@ let lastHeading = 0;
 let font;
 
 let catHeading, catPosition;
+let busPosition;
 
 const nameInput = document.getElementById('name');
 const locationInput = document.getElementById('location');
@@ -43,6 +44,8 @@ function setup() {
 
   catHeading = 0;
   catPosition = createVector(-800, 0, -100);
+
+  busPosition = createVector(-1000, 0, 200);
 }
 
 let tapStart = null;
@@ -79,6 +82,16 @@ function update() {
 
   catHeading += map(noise(millis()/1000), 0, 1, -0.04, 0.04);
   catPosition.add(0.4*cos(catHeading), 0, 0.4*sin(catHeading));
+
+  const inBusStop = position.copy().sub(createVector(500, 0, 300)).magSq() < 10000;
+  if (inBusStop && abs(lastHeading) > PI/2) {
+    if (busPosition.x < -900) {
+      busPosition.x = 1000;
+    }
+    busPosition.add(createVector(300, 0, 300).sub(busPosition).mult(0.05));
+  } else {
+    busPosition.add(createVector(-1000, 0, 300).sub(busPosition).mult(0.05));
+  }
 }
 
 function draw() {
@@ -92,7 +105,7 @@ function draw() {
   scale(0.4);
   rotateX(-PI/8);
   translate(-camera.x, 100, -camera.z + 200);
-  
+
   push();
   fill(255);
   textSize(50);
@@ -123,7 +136,7 @@ function draw() {
   
   push();
   translate(300, 0, 300);
-  busStop();
+  busStop(busPosition);
   pop();
 
   push();
