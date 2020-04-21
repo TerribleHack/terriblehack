@@ -159,6 +159,43 @@ a.button:hover {
   padding: 1em;
 }
 
+#people {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.person {
+  flex: 0 0;
+  margin: 20px;
+  padding: 10px;
+  background-color: #FFF;
+  border-radius: 4px;
+}
+
+.person img {
+  width: 200px;
+  height: auto;
+}
+
+.person h3 {
+  font-size: 24px;
+  font-style: normal;
+  margin: 10px 0 20px 0;
+}
+
+.person h4 {
+  font-size: 16px;
+  font-style: italic;
+  margin: 0 0 10px 0;
+}
+
+.person p {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
 /* From https://codepen.io/atunnecliffe/pen/gpKzQw */
 
 textarea:focus,
