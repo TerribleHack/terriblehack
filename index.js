@@ -42,21 +42,31 @@ function setup() {
   catPosition = createVector(-800, 0, -100);
 }
 
+let tapStart = null;
+function mousePressed() {
+  tapStart = createVector(mouseX, mouseY);
+}
+
+function mouseReleased() {
+  tapStart = null;
+}
+
 function update() {
   velocity.x = 0;
   velocity.y = 0;
   velocity.z = 0;
   
-  if (keyIsDown(65)) { 
+  const threshold = 40;
+  if (keyIsDown(65) || (tapStart && mouseX < tapStart.x - threshold)) { 
     velocity.x -= 5; 
   }
-  if (keyIsDown(68)) { 
+  if (keyIsDown(68) || (tapStart && mouseX > tapStart.x + threshold)) { 
     velocity.x += 5; 
   }
-  if (keyIsDown(87)) { 
+  if (keyIsDown(87) || (tapStart && mouseY < tapStart.y - threshold)) { 
     velocity.z -= 5; 
   }
-  if (keyIsDown(83)) { 
+  if (keyIsDown(83) || (tapStart && mouseY > tapStart.y + threshold)) { 
     velocity.z += 5; 
   }
   
@@ -86,7 +96,7 @@ function draw() {
   textAlign(CENTER);
   text("Welcome to TerribleHack:\nReal Life", -200, -300);
   textSize(30);
-  text("Explore with WASD", -200, -150);
+  text("Explore with WASD or tap & drag", -200, -150);
   pop();
   
   push();
