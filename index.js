@@ -4,6 +4,27 @@ let font;
 
 let catHeading, catPosition;
 
+const nameInput = document.getElementById('name');
+const locationInput = document.getElementById('location');
+const catsInput = document.getElementById('cats');
+const emailInput = document.getElementById('email');
+const applyLink = document.getElementById('apply');
+
+const getLink = () => {
+  const name = encodeURIComponent(nameInput.value);
+  const location = encodeURIComponent(locationInput.value);
+  const cats = encodeURIComponent(catsInput.value);
+  const email = encodeURIComponent(emailInput.value);
+
+  return `https://docs.google.com/forms/d/e/1FAIpQLSclDdyQ1x8nYiKUfseDs4EJHjU1Vck8OHsh0iGy7PbM1tR2Qw/viewform?usp=pp_url&entry.1160134771=${name}&entry.1912821810=${email}&entry.2117272494=${location}&entry.42582944=${cats}`;
+};
+
+[nameInput, locationInput, catsInput, emailInput].forEach(input => {
+  input.addEventListener('change', () => {
+    applyLink.setAttribute('href', getLink());
+  });
+});
+
 function preload() {
   font = loadFont('https://cdn.jsdelivr.net/npm/@typopro/dtp-e-b-garamond@3.7.5/TypoPRO-EBGaramond-Regular.ttf');
 }
