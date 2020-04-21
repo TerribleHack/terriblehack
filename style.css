@@ -8,10 +8,23 @@ body {
   font-family: 'EB Garamond', serif;
 }
 
-#content {
+.content {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
+}
+
+#hero {
+  background-color: #555;
+  background-image: url("background.jpg"); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+#hero h3 {
+  color: #EEE;
 }
 
 p {
@@ -99,6 +112,10 @@ canvas {
 .full {
   width: 100%;
   height: auto;
+}
+
+.logo {
+  width: 100%;
 }
 
 iframe.full {
