@@ -33,6 +33,9 @@ function setup() {
   const canvas = createCanvas(700, 400, WEBGL);
   canvas.parent('canvasContainer');
 
+  // Keep it low-fi!!!
+  pixelDensity(1);
+
   position = createVector(0, 0, 0);
   velocity = createVector(0, 0, 0);
   camera = createVector(0, 0, 0);
