@@ -5,6 +5,8 @@ let font;
 let catHeading, catPosition;
 let busPosition;
 
+let prompts;
+
 const nameInput = document.getElementById('name');
 const locationInput = document.getElementById('location');
 const catsInput = document.getElementById('cats');
@@ -46,6 +48,18 @@ function setup() {
   catPosition = createVector(-800, 0, -100);
 
   busPosition = createVector(-1000, 0, 200);
+
+  prompts = shuffle([
+    "Wow, stuff in Animal Crossing is worth more than oil!",
+    "Anyone got any sourdough starter?",
+    "Maybe it's time I join this TikTok thing",
+    "What even is a weekend any more?",
+    "Dear past self: buy Zoom stock",
+    "I should get good at darts",
+    "I've never found the film Rear Window more relatable",
+    "Can I order friends on Amazon?",
+    "I hope my neighbours don't mind me learning the bagpipes",
+  ]);
 }
 
 let tapStart = null;
@@ -83,7 +97,7 @@ function update() {
   catHeading += map(noise(millis()/1000), 0, 1, -0.04, 0.04);
   catPosition.add(0.4*cos(catHeading), 0, 0.4*sin(catHeading));
 
-  const inBusStop = position.copy().sub(createVector(500, 0, 300)).magSq() < 10000;
+  const inBusStop = position.copy().sub(createVector(500, 0, 300)).magSq() < 20000;
   if (inBusStop && abs(lastHeading) > PI/2) {
     if (busPosition.x < -900) {
       busPosition.x = 1000;
@@ -142,5 +156,10 @@ function draw() {
   push();
   translate(catPosition.x, catPosition.y, catPosition.z);
   petCat(catHeading);
+  pop();
+
+  push();
+  translate(-600, 0, 300);
+  talkToStranger();
   pop();
 }

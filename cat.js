@@ -100,6 +100,7 @@ function cat() {
       );
     });
   });
+  pop();
 
   pop();
 }
