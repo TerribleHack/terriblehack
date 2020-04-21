@@ -3,6 +3,9 @@ let lastHeading = 0;
 let font;
 
 let catHeading, catPosition;
+let busPosition;
+
+let prompts;
 
 const nameInput = document.getElementById('name');
 const locationInput = document.getElementById('location');
@@ -33,6 +36,9 @@ function setup() {
   const canvas = createCanvas(700, 400, WEBGL);
   canvas.parent('canvasContainer');
 
+  // Keep it low-fi!!!
+  pixelDensity(1);
+
   position = createVector(0, 0, 0);
   velocity = createVector(0, 0, 0);
   camera = createVector(0, 0, 0);
@@ -40,6 +46,29 @@ function setup() {
 
   catHeading = 0;
   catPosition = createVector(-800, 0, -100);
+
+  busPosition = createVector(-1000, 0, 200);
+
+  prompts = shuffle([
+    "Wow, stuff in Animal Crossing is worth more than oil!",
+    "Anyone got any sourdough starter?",
+    "Maybe it's time I join this TikTok thing",
+    "What even is a weekend any more?",
+    "Dear past self: buy Zoom stock",
+    "I should get good at darts",
+    "I've never found the film Rear Window more relatable",
+    "Can I order friends on Amazon?",
+    "I hope my neighbours don't mind me learning the bagpipes",
+  ]);
+}
+
+let tapStart = null;
+function mousePressed() {
+  tapStart = createVector(mouseX, mouseY);
+}
+
+function mouseReleased() {
+  tapStart = null;
 }
 
 function update() {
@@ -47,16 +76,17 @@ function update() {
   velocity.y = 0;
   velocity.z = 0;
   
-  if (keyIsDown(65)) { 
+  const threshold = 40;
+  if (keyIsDown(65) || (tapStart && mouseX < tapStart.x - threshold)) { 
     velocity.x -= 5; 
   }
-  if (keyIsDown(68)) { 
+  if (keyIsDown(68) || (tapStart && mouseX > tapStart.x + threshold)) { 
     velocity.x += 5; 
   }
-  if (keyIsDown(87)) { 
+  if (keyIsDown(87) || (tapStart && mouseY < tapStart.y - threshold)) { 
     velocity.z -= 5; 
   }
-  if (keyIsDown(83)) { 
+  if (keyIsDown(83) || (tapStart && mouseY > tapStart.y + threshold)) { 
     velocity.z += 5; 
   }
   
@@ -66,6 +96,16 @@ function update() {
 
   catHeading += map(noise(millis()/1000), 0, 1, -0.04, 0.04);
   catPosition.add(0.4*cos(catHeading), 0, 0.4*sin(catHeading));
+
+  const inBusStop = position.copy().sub(createVector(500, 0, 300)).magSq() < 20000;
+  if (inBusStop && abs(lastHeading) > PI/2) {
+    if (busPosition.x < -900) {
+      busPosition.x = 1000;
+    }
+    busPosition.add(createVector(300, 0, 300).sub(busPosition).mult(0.05));
+  } else {
+    busPosition.add(createVector(-1000, 0, 300).sub(busPosition).mult(0.05));
+  }
 }
 
 function draw() {
@@ -79,14 +119,14 @@ function draw() {
   scale(0.4);
   rotateX(-PI/8);
   translate(-camera.x, 100, -camera.z + 200);
-  
+
   push();
   fill(255);
   textSize(50);
   textAlign(CENTER);
   text("Welcome to TerribleHack:\nReal Life", -200, -300);
   textSize(30);
-  text("Explore with WASD", -200, -150);
+  text("Explore with WASD or tap & drag", -200, -150);
   pop();
   
   push();
@@ -110,11 +150,16 @@ function draw() {
   
   push();
   translate(300, 0, 300);
-  busStop();
+  busStop(busPosition);
   pop();
 
   push();
   translate(catPosition.x, catPosition.y, catPosition.z);
   petCat(catHeading);
+  pop();
+
+  push();
+  translate(-600, 0, 300);
+  talkToStranger();
   pop();
 }

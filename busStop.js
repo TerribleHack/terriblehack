@@ -1,4 +1,4 @@
-function busStop() {
+function busStop(busPosition) {
   noStroke();
   
   // Sign pole
@@ -45,4 +45,12 @@ function busStop() {
   translate(280, 0, 0);
   person();
   pop();
+
+  // Bus
+  if (abs(busPosition.x) < 950) {
+    push();
+    translate(busPosition.x, busPosition.y + -300, busPosition.z);
+    box(400, 250, 250);
+    pop();
+  }
 }

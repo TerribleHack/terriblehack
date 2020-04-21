@@ -1,5 +1,26 @@
 function petCat(heading) {
   push();
+  translate(-catPosition.x, -catPosition.y, -catPosition.z);
+  translate(camera.x - 500, -450, camera.z);
+
+  textSize(24);
+  textAlign(CENTER);
+  fill(255);
+  text("Cat", 0, 0);
+
+  const toCat = catPosition.copy().sub(camera.copy().add(-500, -450, 0)).setMag(25);
+  translate(0, 30, 0);
+  stroke(255);
+  line(
+    0, 0, 0,
+    toCat.x, toCat.y, toCat.z
+  );
+  noStroke();
+  translate(toCat.x, toCat.y, toCat.z);
+  sphere(5, 5, 5);
+  pop();
+
+  push();
   translate(40, -250, 0);
   textSize(24);
   fill(255);
@@ -79,6 +100,7 @@ function cat() {
       );
     });
   });
+  pop();
 
   pop();
 }
