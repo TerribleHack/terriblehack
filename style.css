@@ -104,6 +104,14 @@ canvas {
   flex: 1;
 }
 
+.double {
+  flex: 2;
+}
+
+.triple {
+  flex: 3;
+}
+
 .column h2, .column h3, .column h4, .column h5, .column p {
   width: 100%;
 }
@@ -150,10 +158,33 @@ a.button {
   font-size: 1.4em;
   line-height: 1.4em;
   margin: 20px;
+  overflow: hidden;
 }
 a.button:hover {
   background-color: #4aed3b;
   color: #cc1d1d;
+}
+
+a.button.website {
+  padding: 0;
+  height: 250px;
+  background-size: cover;
+  background-position: center top;
+  text-shadow: 0 0 4px rgba(0,0,0,0.5);
+  display: inline-flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+a.button.website span {
+  display: block;
+  padding: 10px 20px;
+  align-self: stretch;
+  color: #FFF;
+  background-color: #3b7aed;
+}
+a.button.website:hover span {
+  color: #cc1d1d;
+  background-color: #4aed3b;
 }
 
 .item {
