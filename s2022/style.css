@@ -19,12 +19,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 128, 0.55), rgba(0, 0, 128, 0.55)), url("clippy.png"), #011893;
-  background-position: right center;
+  background: linear-gradient(rgba(255, 140, 151, 0.55), rgba(255, 140, 151, 0.55)), url("bob.png"), #FF8C97;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-
-  color: #FFF;
 }
 
 p {
