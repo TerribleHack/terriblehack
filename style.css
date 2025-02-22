@@ -404,3 +404,22 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
   margin-top: 10px;
   font-size: 15px;
 }
+
+#chatbot {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transition: all ease 0.5s;
+}
+
+#speech {
+  position: absolute;
+  right: 120px;
+  top: -40px;
+  padding: 10px;
+  background: white;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 200px;
+  font-size: 0.8em;
+}

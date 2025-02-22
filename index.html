@@ -87,11 +87,45 @@
       <p>Take a look at <a href="https://www.youtube.com/channel/UCznbFDr2mhqFBadguRnG8Hg/videos">past demos on YouTube</a> or one of <a href="https://terriblehack-xiii.devpost.com/">our</a> <a href="https://terriblehack6.devpost.com/">many</a> <a href="https://terriblehack-xi.devpost.com/">old</a> <a href="https://terriblehack-x.devpost.com/">Devposts</a> for more inspiration. You can also <a href="history.html" target="_blank">read about the event's history,</a> which is also pretty dank.</p>
 
       <h2 id="signup">Sign up</h2>
+      <form>
+      <div class="item">
+        <input type="text" name="name" class="question" id="name" required autocomplete="off" />
+        <label for="name"><span>What's your name?</span></label>
+      </div>
 
-      <p style="text-align: center"><a class="button" href="#" id="apply">RSVP on Meetup.com</a></p>
+      <div class="item">
+        <input type="text" name="email" class="question" id="email" required autocomplete="off" />
+        <label for="email"><span>What's your email?</span></label>
+      </div>
+
+      <!--<div class="item">
+        <input type="text" name="spacejam" class="question" id="spacejam" required autocomplete="off" />
+        <label for="cats"><span><i>Optional:</i> Did <em>Space Jam: A New Legacy</em> (2021) live up to the hype?</span></label>
+      </div>-->
+
+
+      <p style="text-align: center"><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLScMyg56oS2CEknFhEurWTl8OSXcEQW-7NrLT5rU9JNzYWokZw/viewform?usp=header" id="apply">Register</a></p>
+
       <p style="text-align: center">...and also <a href="https://discord.gg/ux9txXPsdJ">join the Creative Code Toronto discord!</a></p>
+
+      </form>
+
 
       <p style="text-align: center"><a href="https://creativecodetoronto.github.io/">Creative Code Toronto</a> - <a href="https://interaccess.org/">InterAccess</a> - <a href="conduct.html">Code of Conduct</a> - <a href="history.html">History</a></p>
     </div>
+    <div id="chatbot" style="bottom: -100px">
+      <img src="cloppy.png" />
+      <div id="speech" style="display: none">
+        <div id="p1">
+          <p>It looks like you're trying to apply to a hackathon. Let me help you with that!</p>
+          <button id="holp">HOLP ME</button>
+        </div>
+        <div id="p2" style="display: none">
+          <p>I hope this helps!</p>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="chatbot.js"></script>
   </body>
 </html>
