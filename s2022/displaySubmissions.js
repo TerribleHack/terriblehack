@@ -1,7 +1,7 @@
 loadIssues({
   owner: 'terriblehack',
   repo: 'terriblehack',
-  issue: 39,
+  issue: 60,
   render: (data) => {
     const container = document.getElementById('projects');
     container.innerHTML = [];
